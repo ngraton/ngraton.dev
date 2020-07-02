@@ -7,6 +7,14 @@ class About extends Component {
         <h1>
           Edit About component or pages/about.jsx to include your information.
         </h1>
+        <h4>
+          Based on
+          {" "}
+          <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
+            Gatsby Advanced Starter
+          </a>
+          .
+        </h4>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import Layout from "../layout";
 import About from "../components/About";
 import config from "../../data/SiteConfig";
 
-class AboutPage extends Component {
+class FourOhFour extends Component {
   render() {
     return (
       <Layout>
@@ -17,4 +17,4 @@ class AboutPage extends Component {
   }
 }
 
-export default AboutPage;
+export default FourOhFour;

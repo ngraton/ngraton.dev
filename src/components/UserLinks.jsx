@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 class UserLinks extends Component {
   getLinkElements() {
-    const { userLinks } = this.props.config;
-    const { labeled } = this.props;
+    const { config, labeled } = this.props
+    const { userLinks } = config;
     return userLinks.map(link => (
-      <a href={link.url}>
-        <button type="button" key={link.label}>
+      <a href={link.url} key={link.label}>
+        <button type="button">
           {labeled ? link.label : ""}
         </button>
       </a>
@@ -14,7 +14,8 @@ class UserLinks extends Component {
   }
 
   render() {
-    const { userLinks } = this.props.config;
+    const { config } = this.props
+    const { userLinks } = config;
     if (!userLinks) {
       return null;
     }

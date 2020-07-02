@@ -2,13 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
+import PostListing from "../components/PostListing";
+import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 
 class Listing extends React.Component {
   renderPaging() {
-    const { currentPageNum, pageCount } = this.props.pageContext;
+    const { pageContext } = this.props
+    const { currentPageNum, pageCount } = pageContext;
     const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
     const nextPage = `/${currentPageNum + 1}/`;
     const isFirstPage = currentPageNum === 1;
@@ -34,7 +35,8 @@ class Listing extends React.Component {
   }
 
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const { data } = this.props
+    const postEdges = data.allMarkdownRemark.edges;
 
     return (
       <Layout>

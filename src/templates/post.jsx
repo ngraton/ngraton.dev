@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostTags from "../components/PostTags/PostTags";
-import SEO from "../components/SEO/SEO";
-import Footer from "../components/Footer/Footer";
+import SEO from "../components/SEO";
+import Footer from "../components/Footer";
 import config from "../../data/SiteConfig";
 
 export default class PostTemplate extends React.Component {
