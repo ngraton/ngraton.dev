@@ -6,18 +6,24 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <Link to="/blog" key="blog">
-        <h1>Blog</h1>
-      </Link>
-      <Link to="/projects" key="projects">
-        <h1>Projects</h1>
-      </Link>
-      <Link to="/about" key="about">
-        <h1>About</h1>
-      </Link>
-      <Link to="/now" key="now">
-        <h1>Now</h1>
-      </Link>
+      <div className="navbar-items">
+        <img className="brand-icon" src="/logos/flux_capacitor.svg" alt="flux capacitor icon" />
+        <Link className="brand" to="/" key="home">
+          <span className="brand-text">ngraton.dev</span>
+        </Link>
+        <Link className="nav-link" to="/blog" key="blog">
+          Blog
+        </Link>
+        <Link className="nav-link" to="/projects" key="projects">
+          Projects
+        </Link>
+        <Link className="nav-link" to="/about" key="about">
+          About
+        </Link>
+        <Link className="nav-link" to="/now" key="now">
+          Now
+        </Link>
+      </div>
     </div>
   )
 }
