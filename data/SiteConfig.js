@@ -10,7 +10,6 @@ const config = {
   siteRssTitle: "Nic Graton", // Title of the RSS feed
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
-  postsPerPage: 0, // Amount of posts displayed per listing page.
   userName: "Nic Graton", // Username to display in the author segment.
   userEmail: "mail@ngraton.dev", // Email used for RSS feed's author segment
   userLocation: "Cleveland, Ohio", // User location to display in the author segment.
