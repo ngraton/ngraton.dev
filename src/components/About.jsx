@@ -5,16 +5,9 @@ class About extends Component {
     return (
       <div className="about">
         <h1>
-          Edit About component or pages/about.jsx to include your information.
+          Who am I?
         </h1>
-        <h4>
-          Based on
-          {" "}
-          <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
-            Gatsby Advanced Starter
-          </a>
-          .
-        </h4>
+        <p>I am a computational thinker with a passion for technology and a call to service. I served eight years as an Artillery Officer in the U.S. Army. After leaving active duty I completed the Fullstack Web Development bootcamp at Code Platoon. Now I solve problems as a Software Engineer.</p>
       </div>
     );
   }
