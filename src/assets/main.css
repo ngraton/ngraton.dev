@@ -1,3 +1,47 @@
+@import './fonts/fonts.css';
+
 .navbar {
+  position: sticky;
+  top: 0px;
+  background-color: oldlace;
+}
+
+.navbar-items {
   display: flex;
+  max-width: 92%;
+  margin: auto;
+}
+
+.nav-link {
+  padding: 1em 1em 1em 1em;
+  text-decoration: none;
+}
+
+.brand-icon {
+  height: 1.8em;
+  width: 1.8em;
+  padding: .8em 0;
+}
+
+.brand {
+  font-size: 1.5em;
+  padding: .8em 2em .7em 0;
+  text-decoration: none;
+  font-family: sf_alien_encountersitalic;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+body {
+  margin: 0;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.posts-container {
+  margin: 2em auto;
+  max-width: 90%;
 }
