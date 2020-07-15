@@ -14,7 +14,9 @@ export default class MainLayout extends React.Component {
           <html lang="en" />
         </Helmet>
         <NavBar />
-        {children}
+        <div className="content-container">
+          {children}
+        </div>
       </div>
     );
   }
