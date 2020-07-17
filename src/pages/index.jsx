@@ -2,23 +2,26 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing";
+import HighFive from "../components/HighFive";
 import SEO from "../components/SEO";
 import About from "../components/About"
 import config from "../../data/SiteConfig";
 
-class Landing extends React.Component {
+class Home extends React.Component {
   render() {
     const { data } = this.props
-    const postEdges = data.allMarkdownRemark.edges;
+    const { projects, blogs, featured } = data
+
     return (
       <Layout>
         <div className="landing-container">
           <Helmet title={config.siteTitle} />
           <SEO />
           <About />
-          <div className="posts-container">
-            <PostListing postEdges={postEdges} />
+          <div className="featured-container">
+            <HighFive postEdges={featured.edges} title="Featured" />
+            <HighFive postEdges={blogs.edges} title="Recent Posts" />
+            <HighFive postEdges={projects.edges} title="Recent Projects" />
           </div>
         </div>
       </Layout>
@@ -26,14 +29,59 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default Home;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query LandingQuery {
-    allMarkdownRemark(
+    projects: allMarkdownRemark(
+      limit: 2
       sort: { fields: [fields___date], order: DESC }
       filter: {frontmatter: { category: { eq: "projects" } } }
+      ) {
+      edges {
+        node {
+          fields {
+            slug
+            date
+          }
+          excerpt
+          timeToRead
+          frontmatter {
+            title
+            tags
+            cover
+            date
+          }
+        }
+      }
+    }
+    blogs: allMarkdownRemark(
+      limit: 2
+      sort: { fields: [fields___date], order: DESC }
+      filter: {frontmatter: { category: { eq: "blog" } } }
+      ) {
+      edges {
+        node {
+          fields {
+            slug
+            date
+          }
+          excerpt
+          timeToRead
+          frontmatter {
+            title
+            tags
+            cover
+            date
+          }
+        }
+      }
+    }
+    featured: allMarkdownRemark(
+      limit: 1
+      sort: { fields: [fields___date], order: DESC }
+      filter: {frontmatter: { tags: { eq: "featured" }, category: { eq: "blog" } } }
       ) {
       edges {
         node {

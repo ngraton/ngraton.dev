@@ -1,31 +1,70 @@
 @import './fonts/fonts.css';
 
+html {
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
 .navbar {
   position: sticky;
   top: 0px;
   background-color: oldlace;
+  overflow: hidden;
 }
 
 .navbar-items {
-  display: flex;
-  max-width: 92%;
-  margin: auto;
+  height: 3rem;
 }
 
+.nav-link:not(:first-child) {display: none;}
+
 .nav-link {
-  padding: 1em 1em 1em 1em;
+  padding: 1rem 1rem;
   text-decoration: none;
 }
 
-.brand-icon {
-  height: 1.8em;
-  width: 1.8em;
-  padding: .8em 0;
+@media screen and (min-width: 800px) {
+  .nav-link {
+    display: block;
+    float: left;
+  }
+  .nav-link:not(:first-child) {
+    display: block;
+  }
 }
 
-.brand {
-  font-size: 1.5em;
-  padding: .8em 2em .7em 0;
+.navbar-items button.icon {
+  float: right;
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar-items button.icon {
+    display: none;
+  }
+}
+.brand-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.brand.nav-link  {
+  font-size: 1.5rem;
+  padding: .75rem;
   text-decoration: none;
   font-family: sf_alien_encountersitalic;
 }
@@ -42,6 +81,26 @@ body {
 }
 
 .content-container {
-  margin: 2em auto;
-  max-width: 90%;
+  margin: 2rem;
+  max-width: 800px;
 }
+
+.featured-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+}
+
+.top-five {
+  align-items: center;
+  padding: 2rem;
+  border: 3px solid #efefef;
+  margin: 1rem;
+  width: 337px;
+}
+
+.top-five-title {
+  text-align: center;
+}
+
