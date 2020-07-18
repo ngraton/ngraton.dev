@@ -10,7 +10,7 @@ import config from "../../data/SiteConfig";
 class Home extends React.Component {
   render() {
     const { data } = this.props
-    const { projects, blogs, featured } = data
+    const { projects, blogs, featuredPosts, featuredProjects } = data
 
     return (
       <Layout>
@@ -19,7 +19,8 @@ class Home extends React.Component {
           <SEO />
           <About />
           <div className="featured-container">
-            <HighFive postEdges={featured.edges} title="Featured" />
+            <HighFive postEdges={featuredPosts.edges} title="Featured Posts" />
+            <HighFive postEdges={featuredProjects.edges} title="Featured Projects" />
             <HighFive postEdges={blogs.edges} title="Recent Posts" />
             <HighFive postEdges={projects.edges} title="Recent Projects" />
           </div>
@@ -78,7 +79,29 @@ export const pageQuery = graphql`
         }
       }
     }
-    featured: allMarkdownRemark(
+    featuredPosts: allMarkdownRemark(
+      limit: 1
+      sort: { fields: [fields___date], order: DESC }
+      filter: {frontmatter: { tags: { eq: "featured" }, category: { eq: "blog" } } }
+      ) {
+      edges {
+        node {
+          fields {
+            slug
+            date
+          }
+          excerpt
+          timeToRead
+          frontmatter {
+            title
+            tags
+            cover
+            date
+          }
+        }
+      }
+    }
+    featuredProjects: allMarkdownRemark(
       limit: 1
       sort: { fields: [fields___date], order: DESC }
       filter: {frontmatter: { tags: { eq: "featured" }, category: { eq: "blog" } } }
