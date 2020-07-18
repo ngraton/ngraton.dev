@@ -4,9 +4,9 @@ import PostListing from "./PostListing";
 function HighFive ({ postEdges, title }) {
   return (
     <div className="top-five">
-      <h1 className="top-five-title">
+      <h2 className="top-five-title">
         {title}
-      </h1>
+      </h2>
       <PostListing postEdges={postEdges} />
     </div>
   )
