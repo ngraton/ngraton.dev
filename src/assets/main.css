@@ -26,22 +26,29 @@ h5 {
   overflow: hidden;
 }
 
-.navbar-items {
-  height: 3rem;
-}
-
 .nav-link:not(:first-child) {display: none;}
 
 .nav-link {
   padding: 1rem 1rem;
   text-decoration: none;
+  line-height: 1;
+  display: block;
+  float: left;
+}
+
+.navbar.responsive {position: relative;}
+.navbar.responsive button.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.navbar.responsive .nav-link {
+  float: none;
+  display: block;
+  text-align: left;
 }
 
 @media screen and (min-width: 800px) {
-  .nav-link {
-    display: block;
-    float: left;
-  }
   .nav-link:not(:first-child) {
     display: block;
   }
@@ -50,6 +57,8 @@ h5 {
 .navbar-items button.icon {
   float: right;
   display: block;
+  height: 3rem;
+  width: 3rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -64,9 +73,22 @@ h5 {
 
 .brand.nav-link  {
   font-size: 1.5rem;
-  padding: .75rem;
   text-decoration: none;
   font-family: sf_alien_encountersitalic;
+  padding: .75rem;
+  align-items: center;
+  display: flex;
+  width: fit-content;
+}
+
+.navbar.navbar.responsive .brand.nav-link  {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: sf_alien_encountersitalic;
+  padding: .75rem;
+  align-items: center;
+  display: flex;
+  width: fit-content;
 }
 
 h1 {
@@ -95,7 +117,8 @@ body {
 .top-five {
   align-items: center;
   padding: 2rem;
-  border: 3px solid #efefef;
+  border: 2px solid #efefef;
+  border-radius: 5px;
   margin: 1rem;
   width: 337px;
 }

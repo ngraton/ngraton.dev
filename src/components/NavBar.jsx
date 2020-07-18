@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 
 function NavBar() {
-
+  const [responsive, setResponsive] = React.useState('')
   return (
-    <div className="navbar">
+    <div className={responsive ? "navbar responsive" : "navbar"}>
       <div className="navbar-items">
         <Link className="brand nav-link" to="/" key="home">
           <img className="brand-icon" src="/logos/flux_capacitor.svg" alt="flux capacitor icon" />
@@ -22,7 +22,7 @@ function NavBar() {
         <Link className="nav-link" to="/now" key="now">
           Now
         </Link>
-        <button type="button" className="icon" onClick="myFunction()">
+        <button type="button" className="icon" onClick={() => setResponsive(!responsive)}>
           <i className="fa fa-bars" />
         </button>
       </div>
