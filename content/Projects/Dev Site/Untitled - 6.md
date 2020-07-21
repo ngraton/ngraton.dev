@@ -3,9 +3,9 @@ title: "dev site"
 cover: ""
 date: "2020-07-06"
 tags:
-	- project log
-	- web development
-	- navbar
+- project log
+- web development
+- navbar
 ---
 
 Working on the NavBar. Trying to build a brand with a particular font. I have discovered that this font has space at the bottom so that it doesn't look centered vertically in the NavBar. Carefully placed it with padding so that it looks vertically centered.
