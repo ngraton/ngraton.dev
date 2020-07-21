@@ -104,7 +104,7 @@ export const pageQuery = graphql`
     featuredProjects: allMarkdownRemark(
       limit: 1
       sort: { fields: [fields___date], order: DESC }
-      filter: {frontmatter: { tags: { eq: "featured" }, category: { eq: "blog" } } }
+      filter: {frontmatter: { tags: { eq: "featured" }, category: { eq: "projects" } } }
       ) {
       edges {
         node {
