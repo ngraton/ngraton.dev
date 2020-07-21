@@ -60,8 +60,6 @@ bundle-stats.json
 
 # macOS
 .DS_Store
-content/.Ulysses-Group.plist
-content/Dev Site/.Ulysses-Group.plist
-content/Blog/.Ulysses-Group.plist
-content/Projects/.Ulysses-Group.plist
-content/Projects/Dev Site/.Ulysses-Group.plist
+
+# Ulysses
+*.Ulysses-Group.plist
