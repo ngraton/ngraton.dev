@@ -53,6 +53,7 @@ export const pageQuery = graphql`
             tags
             cover
             date
+            blurb
           }
         }
       }
@@ -75,6 +76,7 @@ export const pageQuery = graphql`
             tags
             cover
             date
+            blurb
           }
         }
       }
@@ -97,6 +99,7 @@ export const pageQuery = graphql`
             tags
             cover
             date
+            blurb
           }
         }
       }
@@ -119,6 +122,7 @@ export const pageQuery = graphql`
             tags
             cover
             date
+            blurb
           }
         }
       }

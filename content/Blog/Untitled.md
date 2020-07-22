@@ -3,6 +3,7 @@ title: "Hello World"
 cover: ""
 date: "2020-07-21"
 category: "blog"
+blurb: "Introduction to the Site"
 tags:
 - featured
 ---

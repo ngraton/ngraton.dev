@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
+
 class PostListing extends React.Component {
   getPostList() {
     const { postEdges } = this.props
@@ -13,7 +14,8 @@ class PostListing extends React.Component {
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
+        timeToRead: postEdge.node.timeToRead,
+        blurb: postEdge.node.frontmatter.blurb
       });
     });
     return postList;
@@ -25,9 +27,12 @@ class PostListing extends React.Component {
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <p className="post-list-item">{post.title}</p>
-          </Link>
+          <p className="post-list-item">
+            <Link to={post.path} key={post.title}>
+              {post.title}
+            </Link>
+            {post.blurb ? ` - ${post.blurb}`: ''}
+          </p>
         ))
 }
       </div>
