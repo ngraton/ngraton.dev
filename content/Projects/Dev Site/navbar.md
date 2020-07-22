@@ -1,7 +1,9 @@
 ---
-title: "dev site"
+title: "Dev Site - Navbar"
 cover: ""
 date: "2020-07-06"
+category: "project log"
+project: "Dev Site"
 tags:
 - project log
 - web development

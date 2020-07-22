@@ -1,7 +1,7 @@
 ---
 title: "Dev Site"
 cover: ""
-date: "2020-07-04"
+date: "2020-07-03"
 blurb: "This Site"
 category: "projects"
 tags:
