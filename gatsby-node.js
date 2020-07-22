@@ -42,6 +42,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postPage = path.resolve("src/templates/post.jsx");
+  const projectPage = path.resolve("src/templates/project.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
 
 
@@ -58,6 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               tags
               date
+              category
             }
           }
         }
@@ -114,17 +116,32 @@ exports.createPages = async ({ graphql, actions }) => {
     const nextEdge = postsEdges[nextID];
     const prevEdge = postsEdges[prevID];
 
-    createPage({
-      path: edge.node.fields.slug,
-      component: postPage,
-      context: {
-        slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter.title,
-        nextslug: nextEdge.node.fields.slug,
-        prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
-      }
-    });
+    if (edge.node.frontmatter.category === 'projects') {
+      createPage({
+        path: edge.node.fields.slug,
+        component: projectPage,
+        context: {
+          slug: edge.node.fields.slug,
+          logtag: edge.node.frontmatter.title,
+          nexttitle: nextEdge.node.frontmatter.title,
+          nextslug: nextEdge.node.fields.slug,
+          prevtitle: prevEdge.node.frontmatter.title,
+          prevslug: prevEdge.node.fields.slug
+        }
+      });
+    } else {
+      createPage({
+        path: edge.node.fields.slug,
+        component: postPage,
+        context: {
+          slug: edge.node.fields.slug,
+          nexttitle: nextEdge.node.frontmatter.title,
+          nextslug: nextEdge.node.fields.slug,
+          prevtitle: prevEdge.node.frontmatter.title,
+          prevslug: prevEdge.node.fields.slug
+        }
+      });
+    }
   });
 
   //  Create tag pages
