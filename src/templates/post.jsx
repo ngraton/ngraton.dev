@@ -50,6 +50,8 @@ export const pageQuery = graphql`
         cover
         date
         tags
+        blurb
+        category
       }
       fields {
         slug
