@@ -10,8 +10,8 @@ function NavBar() {
           <img className="brand-icon" src="/logos/flux_capacitor.svg" alt="flux capacitor icon" />
           <span className="brand-text">ngraton.dev</span>
         </Link>
-        <Link className="nav-link" to="/blog" key="blog">
-          Blog
+        <Link className="nav-link" to="/writing" key="writing">
+          Writing
         </Link>
         <Link className="nav-link" to="/projects" key="projects">
           Projects
