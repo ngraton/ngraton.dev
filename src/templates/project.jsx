@@ -29,8 +29,10 @@ export default class PostTemplate extends React.Component {
           <div>
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <h3>Project Logs</h3>
-            <PostListing postEdges={logEdges} />
+            <div className="project-log-container">
+              <h2>Project Logs</h2>
+              <PostListing postEdges={logEdges} showDate />
+            </div>
             <div className="post-meta">
               <PostTags tags={post.tags} />
             </div>
