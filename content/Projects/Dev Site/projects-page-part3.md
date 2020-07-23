@@ -1,7 +1,9 @@
 ---
-title: "Dev Site - Project Page Part 3"
+title: "Project Page Part 3"
 cover: ""
 date: "2020-07-21"
+category: "project log"
+project: "Dev Site"
 tags:
 - project log
 - web development

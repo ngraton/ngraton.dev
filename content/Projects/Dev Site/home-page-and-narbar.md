@@ -1,5 +1,5 @@
 ---
-title: "Dev Site - Home Page and NavBar"
+title: "Home Page and NavBar"
 cover: ""
 date: "2020-07-04"
 category: "project log"

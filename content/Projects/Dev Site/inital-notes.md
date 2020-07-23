@@ -1,5 +1,5 @@
 ---
-title: "Dev Site - Inital Notes"
+title: "Initial Notes"
 cover: ""
 date: "2020-07-04"
 category: "project log"

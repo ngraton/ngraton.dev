@@ -1,5 +1,5 @@
 ---
-title: "Dev Site - Projects Page Part 2"
+title: " Projects Page Part 2"
 cover: ""
 date: "2020-07-15"
 category: "project log"
