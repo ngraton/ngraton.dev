@@ -139,3 +139,28 @@ body {
   text-align: center;
 }
 
+.project-log-container {
+  border: 2px solid #cb11e8;
+  border-radius: 5px;
+  box-shadow: 3px 3px 1px #ffef0f;
+  align-items: center;
+  padding: 30px;
+}
+
+.notice-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.copyright {
+  margin: 0;
+}
+
+.post-tag-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
