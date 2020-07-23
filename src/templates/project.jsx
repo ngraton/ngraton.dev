@@ -19,8 +19,6 @@ export default class PostTemplate extends React.Component {
       post.id = slug;
     }
 
-    console.log(pageContext.logtag)
-
     return (
       <Layout>
         <div>
