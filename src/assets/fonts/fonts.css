@@ -3,7 +3,18 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo|Bungee|Bungee+Shade|Creepster|Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One|Special+Elite&display=swap');
 @import url('https://use.typekit.net/lsl8ima.css');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
+
+
+@font-face {
+  font-family: 'pacfontregular';
+  src: url('pac-font-webfont.woff2') format('woff2'),
+       url('pac-font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 @font-face {
     font-family: 'lazer84regular';
