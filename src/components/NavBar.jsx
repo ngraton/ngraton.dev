@@ -6,9 +6,10 @@ function NavBar() {
   return (
     <div className={responsive ? "navbar responsive" : "navbar"}>
       <div className="navbar-items">
-        <Link className="brand nav-link" to="/" key="home">
+        <Link className="brand" to="/" key="home">
           <img className="brand-icon" src="/logos/flux_capacitor.svg" alt="flux capacitor icon" />
           <span className="brand-text">ngraton.dev</span>
+          <p className="brand-tagline">...and the quest for digital craftsmanship</p>
         </Link>
         <Link className="nav-link" to="/writing" key="writing">
           Writing
