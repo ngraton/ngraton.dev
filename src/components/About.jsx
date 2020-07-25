@@ -7,7 +7,9 @@ class About extends Component {
         <h1>
           Who am I?
         </h1>
-        <p>I am a computational thinker with a passion for technology and a call to service. I served eight years as an Artillery Officer in the U.S. Army. After leaving active duty I completed the Fullstack Web Development bootcamp at Code Platoon. Now I solve problems as a Software Engineer.</p>
+        <p>
+          I am a computational thinker with a passion for technology and a call to service. I served eight years as an Artillery Officer in the U.S. Army. Now I solve problems as a Software Engineer.
+        </p>
       </div>
     );
   }
