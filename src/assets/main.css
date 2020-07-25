@@ -1,12 +1,24 @@
 @import './fonts/fonts.css';
 
+:root {
+  --theme-color: #cb11e8;
+  --theme-dark: #7e07ad;
+  --theme-light: #e333ff;
+  --comp-color: #fae900;
+  --comp-dark: #dbc200;
+  --comp-light: #f0ee26;
+  --main-text-color: #343a40;
+  --secondary-text-color: #5e6164;
+  --theme-text-shadow: 2px 2px 2px var(--theme-dark),5px 5px 5px var(--comp-dark);
+  --theme-box-shadow: 1px .25rem .5rem 0 var(--theme-dark), 0 .5rem 1rem 0 var(--comp-dark);
+  --theme-box-border: 2px solid var(--theme-color);
+}
+
 html {
   box-sizing: border-box;
   line-height: 1.6;
   color: #343a40;
   font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Roboto,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
 }
 *,
 *:before,
@@ -23,23 +35,37 @@ h5 {
   margin-top: 0;
 }
 
+h1 {
+  color: var(--theme-color);
+  font-family: lazer84regular;
+  text-shadow: var(--theme-text-shadow);
+}
+
+h3 {
+  color: var(--secondary-text-color);
+}
+
 a {
-  color: #cb11e8;
+  color: var(--theme-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #e313ff;
+  color: var(--theme-light);
   border-bottom: 2px solid #e313ff;
 }
 
 .navbar {
   position: sticky;
   top: 0px;
-  background-color: #ffef0f;
+  background-color: var(--comp-color);
   overflow: hidden;
-  color: #cb11e8;
+  color:var(--comp-color);
+  padding: 1rem 0;
+  z-index: 5;
+  box-shadow: var(--theme-box-shadow);
 }
+
 
 .nav-link:not(:first-child) {
   display: none;
@@ -51,27 +77,50 @@ a.nav-link {
   line-height: 1;
   display: block;
   float: left;
-  color: #cb11e8;
   border: none;
 }
 
 .navbar.responsive {
   position: sticky;
 }
-.navbar.responsive button.icon {
+
+button.icon {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 1rem;
 }
+
 .navbar.responsive .nav-link {
   float: none;
   display: block;
   text-align: left;
 }
 
-@media screen and (min-width: 800px) {
+.navbar.responsive .navbar-items {
+  display: block;
+}
+
+.navbar-items {
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 864px;
+  display: flex;
+  font-family: lazer84regular;
+  text-shadow: var(--theme-text-shadow);
+}
+
+@media screen and (min-width: 816px) {
   .nav-link:not(:first-child) {
-    display: block;
+    display: flex;
+  }
+  .project-container {
+    display: flex;
+  }
+  .project-log-container {
+    margin: .5rem;
+  }
+  .navbar-items {
+    padding: 0 2rem;
   }
 }
 
@@ -82,9 +131,30 @@ a.nav-link {
   width: 3rem;
 }
 
-@media screen and (min-width: 800px) {
+.content-container {
+  margin: auto;
+  max-width: 1239px;
+  padding: 1.5rem;
+}
+
+img {
+  max-width: 272px;
+}
+
+.content-container p {
+  margin: 1rem auto;
+}
+
+@media screen and (min-width: 816px) {
   .navbar-items button.icon {
     display: none;
+  }
+  .content-container {
+    padding: 2rem;
+  }
+  img {
+    max-width: 816px;
+    margin: 0 auto;
   }
 }
 .brand-icon {
@@ -92,19 +162,30 @@ a.nav-link {
   width: 1.5rem;
 }
 
-.brand.nav-link  {
-  font-size: 1.5rem;
+.brand-tagline {
+  margin: 0;
+
+  font-size: 1rem;
   text-decoration: none;
-  font-family: sf_alien_encountersitalic;
-  padding: .75rem;
-  align-items: center;
-  display: flex;
-  width: fit-content;
-  text-shadow: 2px 2px #7d2785;
+
 }
 
-.navbar.responsive .brand.nav-link  {
-  display: flex;
+.brand:hover {
+  border-bottom: none;
+}
+
+.brand  {
+  font-family: sf_alien_encountersitalic;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: .25rem 0;
+  align-items: center;
+  display: block;
+  width: fit-content;
+}
+
+.navbar.responsive .brand  {
+  padding: .75rem 0;
 }
 
 body {
@@ -113,10 +194,7 @@ body {
   font-style: normal;
 }
 
-.content-container {
-  margin: 2rem;
-  max-width: 800px;
-}
+
 
 .featured-container {
   display: flex;
@@ -128,11 +206,10 @@ body {
 .top-five {
   align-items: center;
   padding: 2rem;
+  margin: .75rem auto;
+  width: 375px;
+  box-shadow: 1px .25rem .5rem 0 #7d2785, 0 .5rem 1rem 0 #e8da11;
   border: 2px solid #cb11e8;
-  border-radius: 5px;
-  margin: 1rem;
-  width: 337px;
-  box-shadow: 3px 3px 1px #ffef0f;
 }
 
 .top-five-title {
@@ -141,8 +218,7 @@ body {
 
 .project-log-container {
   border: 2px solid #cb11e8;
-  border-radius: 5px;
-  box-shadow: 3px 3px 1px #ffef0f;
+  box-shadow: 1px .25rem .5rem 0 #7d2785, 0 .5rem 1rem 0 #e8da11;
   align-items: center;
   padding: 30px;
 }
@@ -163,4 +239,14 @@ body {
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
+}
+
+.PacManGo-title {
+  font-family: pacfontregular;
+  color: #FFFF00;
+}
+
+.Dev.Site-title {
+  font-family: sf_alien_encountersitalic;
+  font-weight: normal;
 }

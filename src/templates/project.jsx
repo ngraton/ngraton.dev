@@ -26,18 +26,18 @@ export default class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <h1 className={`${post.title}-title`}>{post.title}</h1>
+          <div className="project-container">
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} className="project-post" />
             <div className="project-log-container">
               <h2>Project Logs</h2>
               <PostListing postEdges={logEdges} showDate />
             </div>
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-            </div>
-            <Footer config={config} />
           </div>
+          <div className="post-meta">
+            <PostTags tags={post.tags} />
+          </div>
+          <Footer config={config} />
         </div>
       </Layout>
     );
