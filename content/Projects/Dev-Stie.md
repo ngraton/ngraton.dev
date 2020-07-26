@@ -4,8 +4,17 @@ cover: ""
 date: "2020-07-03"
 blurb: "This Site"
 category: "projects"
+links: {
+GitHub: "https://github.com/ngraton/ngraton.dev",
+Production: "https://ngraton.dev"
+}
 tags:
 - featured
+- Gatsby
+- GraphQL
+- CSS
+- React
+- Design
 ---
 
 ## What is It?
