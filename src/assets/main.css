@@ -10,7 +10,9 @@
   --main-text-color: #343a40;
   --secondary-text-color: #5e6164;
   --theme-text-shadow: 2px 2px 2px var(--theme-dark),5px 5px 5px var(--comp-dark);
+  --theme-text-highlight: 2px 2px 2px var(--theme-color),5px 5px 5px var(--comp-color);
   --theme-box-shadow: 1px .25rem .5rem 0 var(--theme-dark), 0 .5rem 1rem 0 var(--comp-dark);
+  --theme-box-highlight: 1px .25rem .5rem 0 var(--theme-color), 0 .5rem 1rem 0 var(--comp-color);
   --theme-box-border: 2px solid var(--theme-color);
 }
 
@@ -66,7 +68,6 @@ a:hover {
   box-shadow: var(--theme-box-shadow);
 }
 
-
 .nav-link:not(:first-child) {
   display: none;
 }
@@ -109,15 +110,16 @@ button.icon {
   text-shadow: var(--theme-text-shadow);
 }
 
+.nav-link:hover {
+  text-shadow: var(--theme-text-highlight);
+}
+
 @media screen and (min-width: 816px) {
   .nav-link:not(:first-child) {
     display: flex;
   }
   .project-container {
     display: flex;
-  }
-  .project-log-container {
-    margin: .5rem;
   }
   .navbar-items {
     padding: 0 2rem;
@@ -156,6 +158,9 @@ img {
     max-width: 816px;
     margin: 0 auto;
   }
+  .sidebar {
+    margin-left: 2rem;
+  }
 }
 .brand-icon {
   height: 1.5rem;
@@ -164,10 +169,8 @@ img {
 
 .brand-tagline {
   margin: 0;
-
   font-size: 1rem;
   text-decoration: none;
-
 }
 
 .brand:hover {
@@ -194,6 +197,9 @@ body {
   font-style: normal;
 }
 
+.sidebar {
+  min-width: 272px;
+}
 
 
 .featured-container {
@@ -221,6 +227,7 @@ body {
   box-shadow: 1px .25rem .5rem 0 #7d2785, 0 .5rem 1rem 0 #e8da11;
   align-items: center;
   padding: 30px;
+  margin-bottom: 1rem;
 }
 
 .notice-container {
@@ -235,18 +242,50 @@ body {
 }
 
 .post-tag-container {
-  display: flex;
+  border: 2px solid #cb11e8;
+  box-shadow: 1px .25rem .5rem 0 #7d2785, 0 .5rem 1rem 0 #e8da11;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 1rem;
+  padding: 30px;
+  margin-bottom: 1rem;
 }
 
-.PacManGo-title {
+.post-tag-container a:hover {
+  border: none;
+}
+
+.pac-man-go-title {
   font-family: pacfontregular;
   color: #FFFF00;
 }
 
-.Dev.Site-title {
+.dev-site-title {
   font-family: sf_alien_encountersitalic;
   font-weight: normal;
+}
+
+.tag-button {
+  background-color: var(--theme-color);
+  color: var(--comp-color);
+  border: 1px outset var(--theme-dark);
+  padding: .5rem;
+  border-radius: 5px;
+  box-shadow: var(--theme-box-shadow);
+  margin: .25rem;
+  font-weight: bold;
+}
+
+.tag-button:hover {
+  background-color: var(--theme-light);
+  color: var(--comp-light);
+  border: 1px outset var(--theme-color);
+  box-shadow: var(--theme-box-highlight);
+
+}
+
+.featured-tag {
+  display: none;
+}
+
+a.anchor.before {
+  display: none;
 }
