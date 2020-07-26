@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+import _ from "lodash";
 import Layout from "../layout";
 import PostTags from "../components/PostTags";
 import PostListing from "../components/PostListing";
@@ -18,6 +19,8 @@ export default class PostTemplate extends React.Component {
     if (!post.id) {
       post.id = slug;
     }
+    // var linkList = []
+    // for var key in Object()
 
     return (
       <Layout>
@@ -26,16 +29,16 @@ export default class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <h1 className={`${post.title}-title`}>{post.title}</h1>
+          <h1 className={`${_.kebabCase(post.title)}-title`}>{post.title}</h1>
           <div className="project-container">
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} className="project-post" />
-            <div className="project-log-container">
-              <h2>Project Logs</h2>
-              <PostListing postEdges={logEdges} showDate />
+            <div className="sidebar">
+              <div className="project-log-container">
+                <h2>Project Logs</h2>
+                <PostListing postEdges={logEdges} showDate />
+              </div>
+              <PostTags tags={post.tags} />
             </div>
-          </div>
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
           </div>
           <Footer config={config} />
         </div>
