@@ -22,3 +22,5 @@ The main page could use some adjustment — i'll have to make a call on whether 
 Mobile is doing ok — I need to put in an icon for the dropdown, and figure out the tagline font size and placement, but beyond that I'm pretty happy with it.
 
 I started this color scheme as a bit of a joke — I thought it might wind up as an easter egg option or something and was just using it as a filler — but, it turns out I actually like it.  Still need a bit more work on the font selections — they're close, but not quite right.
+
+Got the responsive navbar working with the links spread out to match the content width in desktop. Calling it a night.
