@@ -16,6 +16,9 @@
   --theme-box-shadow: 1px .25rem .5rem 0 var(--theme-dark), 0 .5rem 1rem 0 var(--comp-dark);
   --theme-box-highlight: 1px .25rem .5rem 0 var(--theme-color), 0 .5rem 1rem 0 var(--comp-color);
   --theme-box-border: 2px solid var(--theme-color);
+  --brand-font: sf_alien_encountersitalic;
+  --headline-font: lazer84regular;
+  --body-font: -apple-system,BlinkMacSystemFont,Helvetica Neue,Roboto,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
 /* Universals */
@@ -24,7 +27,7 @@ html {
   box-sizing: border-box;
   line-height: 1.6;
   color: #343a40;
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Roboto,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-family: var(--body-font);
 }
 *,
 *:before,
@@ -49,7 +52,7 @@ h5 {
 
 h1 {
   color: var(--theme-color);
-  font-family: lazer84regular;
+  font-family: var(--headline-font);
   text-shadow: var(--theme-text-shadow);
 }
 
@@ -106,7 +109,7 @@ a.nav-link {
   max-width: 864px;
   display: flex;
   align-items: center;
-  font-family: lazer84regular;
+  font-family: var(--headline-font);
   text-shadow: var(--theme-text-shadow);
 }
 
@@ -158,13 +161,14 @@ a.nav-link {
 
 .brand-icon {
   height: 1.5rem;
-  width: 1.5rem;
+  width: 4rem;
 }
 
 .brand-tagline {
   margin: 0;
   font-size: 1rem;
   text-decoration: none;
+  font-family: var(--headline-font);
 }
 
 .brand:hover {
@@ -172,7 +176,7 @@ a.nav-link {
 }
 
 .brand  {
-  font-family: sf_alien_encountersitalic;
+  font-family: var(--brand-font);
   font-size: 1.5rem;
   text-decoration: none;
   text-shadow: var(--theme-text-shadow);
@@ -285,7 +289,6 @@ img {
   color: var(--comp-color);
   border: 1px outset var(--theme-dark);
   padding: .5rem;
-  border-radius: 5px;
   box-shadow: var(--theme-box-shadow);
   margin: .25rem;
   font-weight: bold;
