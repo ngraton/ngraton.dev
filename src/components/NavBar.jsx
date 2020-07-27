@@ -8,9 +8,8 @@ function NavBar() {
       <div className="navbar-container">
         <div className="brand-container">
           <Link className="brand" to="/" key="home">
-            <img className="brand-icon" src="/logos/flux_capacitor.svg" alt="flux capacitor icon" />
-            <span className="brand-text">ngraton.dev</span>
-            <p className="brand-tagline">...and the quest for digital craftsmanship</p>
+            <img className="brand-icon" src="/logos/logo.svg" alt="flux capacitor icon" />
+            <p className="brand-tagline">and the quest for digital craftsmanship</p>
           </Link>
         </div>
         <div className="navbar-items">
