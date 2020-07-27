@@ -1,22 +1,35 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import UserLinks from "./UserLinks";
 
 class Footer extends Component {
+
+  getLinkElements() {
+    const { config } = this.props
+    const { userLinks } = config;
+    return userLinks.map(link => (
+      <Link to={link.url} key={link.label}>
+        {link.label}
+      </Link>
+    ));
+  }
+
   render() {
     const { config } = this.props;
     const url = config.siteRss;
     const { copyright } = config;
+    
+
+
     if (!copyright) {
       return null;
     }
     return (
       <footer className="footer">
-        <UserLinks config={config} labeled />
         <div className="notice-container">
           <Link to={url}>
-            <button type="button">Subscribe</button>
+            Subscribe
           </Link>
+          {this.getLinkElements()}
           <h5 className="copyright">{copyright}</h5>
         </div>
       </footer>
