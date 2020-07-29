@@ -5,10 +5,10 @@ class About extends Component {
     return (
       <div className="about">
         <h1>
-          Hi I&apos;m Nic
+          Welcome!
         </h1>
         <p>
-          This site is my workshop — a repository for my notes, thoughts, guides and projects as I pursue digital craftsmanship.
+          I&apos;m Nic. This site is my workshop — a repository for my notes, thoughts, guides and projects as I pursue digital craftsmanship.
         </p>
       </div>
     );

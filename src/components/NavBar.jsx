@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "gatsby";
 
 function NavBar() {
-  const [responsive, setResponsive] = React.useState('')
+  const [responsive, setResponsive] = React.useState(false)
+
   return (
     <div className={responsive ? "navbar responsive" : "navbar"}>
       <div className="navbar-container">
         <div className="brand-container">
           <Link className="brand" to="/" key="home">
-            <img className="brand-icon" src="/logos/logo.svg" alt="flux capacitor icon" />
-            <p className="brand-tagline">and the quest for digital craftsmanship</p>
+            <img className="brand-icon" src="/logos/logo.svg" alt="ngraton.com logo" />
           </Link>
         </div>
         <div className="navbar-items">

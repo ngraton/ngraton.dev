@@ -36,7 +36,7 @@ export default Home;
 export const pageQuery = graphql`
   query LandingQuery {
     projects: allMarkdownRemark(
-      limit: 2
+      limit: 5
       sort: { fields: [fields___date], order: DESC }
       filter: {frontmatter: { category: { eq: "projects" } } }
       ) {
@@ -59,7 +59,7 @@ export const pageQuery = graphql`
       }
     }
     blogs: allMarkdownRemark(
-      limit: 2
+      limit: 5
       sort: { fields: [fields___date], order: DESC }
       filter: {frontmatter: { category: { eq: "blog" } } }
       ) {
@@ -82,7 +82,6 @@ export const pageQuery = graphql`
       }
     }
     featuredPosts: allMarkdownRemark(
-      limit: 1
       sort: { fields: [fields___date], order: DESC }
       filter: {frontmatter: { tags: { eq: "featured" }, category: { eq: "blog" } } }
       ) {
@@ -105,7 +104,6 @@ export const pageQuery = graphql`
       }
     }
     featuredProjects: allMarkdownRemark(
-      limit: 1
       sort: { fields: [fields___date], order: DESC }
       filter: {frontmatter: { tags: { eq: "featured" }, category: { eq: "projects" } } }
       ) {

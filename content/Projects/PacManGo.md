@@ -5,7 +5,6 @@ date: "2020-07-25"
 blurb: "Turns running into a pac-man like game."
 category: "projects"
 tags:
-- featured
 ---
 
 ## What is It?

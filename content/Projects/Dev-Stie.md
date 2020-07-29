@@ -18,7 +18,7 @@ tags:
 ---
 
 ## What is It?
-The very site you are looking at. My own personal piece of interweb real estate, built by me to be as close to my ideal as possible.
+The very site you are looking at. My own personal piece of interweb real estate, built by me to be as close to my ideal as possible — although, for the moment it is still very much a work in progress.
 
 ## What's it use?
 Gatsby, (and therefore React and GraphQL), and CSS. (no SASS or UI frameworks). 
