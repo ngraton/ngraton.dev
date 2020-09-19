@@ -149,7 +149,7 @@ a.nav-link {
 }
 
 .brand-icon {
-  height: auto;
+  max-height: 4.2rem;
   width: 15rem;
 }
 
@@ -168,7 +168,7 @@ a.nav-link {
     align-items: center;
   }
   .brand-icon {
-    height: auto;
+    max-height: 8.2rem;
     width: 30rem;
   }
   
