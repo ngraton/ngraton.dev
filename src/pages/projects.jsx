@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
@@ -25,7 +26,6 @@ class Projects extends React.Component {
 
 export default Projects;
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query ProjectsQuery {
     allMarkdownRemark(
