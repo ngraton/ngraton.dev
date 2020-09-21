@@ -11,7 +11,7 @@
   --comp-light: #f0ee26;
   --main-text-color: #343a40;
   --secondary-text-color: #5e6164;
-  --backgound-white: #F7F7E4;
+  --backgound-white: #FAFAF5;
   --theme-text-shadow: 2px 2px 2px var(--theme-dark),4px 4px 5px #099942;
   --theme-text-highlight: 2px 2px 2px var(--theme-color),5px 5px 5px var(--comp-color);
   --theme-box-shadow: 1px .25rem .5rem 0 var(--theme-dark), 0 .5rem 1rem 0 var(--comp-dark);
